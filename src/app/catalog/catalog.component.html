@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="filters">
+    <!-- Parenthesis "()" bind from the direction of the template to the component
+     Use parenthese to bind to statments ""
+     Statements return no value and typically create a change in the state of the application.
+     -->
+    <a class="button" (click)="filter='Heads'">Heads</a>
+    <a class="button" (click)="filter='Arms'">Arms</a>
+    <a class="button" (click)="filter='Torsos'">Torsos</a>
+    <a class="button" (click)="filter='Bases'">Bases</a>
+    <a class="button" (click)="filter='All'">All</a>
+  </div>
+
+  <ul class="products">
+    <li class="product-item" *ngFor="let product of getFilteredProducts()">
+      <bot-product-details
+      [product]="product"
+      (buy)="addToCart(product)">
+      </bot-product-details>
+    </li>
+  </ul>
+</div>
