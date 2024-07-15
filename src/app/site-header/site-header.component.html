@@ -1,11 +1,15 @@
 <div class="container">
   <div class="left">
     <img class="logo" src="/assets/images/logo.png" alt="Logo" />
-    <a>Home</a>
-    <a href="">Catalog</a>
+    <!-- routerLink doesn't reload the page on click where as href does -->
+    <!-- routerLink doesn't lose state on the page where href does -->
+    <a routerLink="/home" routerLinkActive="active">Home</a>
+    <a routerLink="/catalog" routerLinkActive="active">Catalog</a>
     <div class="cart">
-      <a href="">Cart</a>
+      <a routerLink="/cart" routerLinkActive="active">Cart</a>
     </div>
+    <!-- Dynamic link example: promotes readibility by avoiding concatenation, interpolation, and forward slashes -->
+    <!-- <a [routerLink]="['user', user.id]">{{user.name}}</a> -->
   </div>
   <div class="right">
     <a href="">Sign In</a>

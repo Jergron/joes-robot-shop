@@ -4,11 +4,11 @@
      Use parenthese to bind to statments ""
      Statements return no value and typically create a change in the state of the application.
      -->
-    <a class="button" (click)="filter='Heads'">Heads</a>
-    <a class="button" (click)="filter='Arms'">Arms</a>
-    <a class="button" (click)="filter='Torsos'">Torsos</a>
-    <a class="button" (click)="filter='Bases'">Bases</a>
-    <a class="button" (click)="filter='All'">All</a>
+    <a routerLink="/catalog" [queryParams]="{filter: 'heads'}" routerLinkActive="disabled" class="button">Heads</a>
+    <a routerLink="/catalog" [queryParams]="{filter: 'arms'}" routerLinkActive="disabled" class="button">Arms</a>
+    <a routerLink="/catalog" [queryParams]="{filter: 'torsos'}" routerLinkActive="disabled" class="button">Torsos</a>
+    <a routerLink="/catalog" [queryParams]="{filter: 'bases'}" routerLinkActive="disabled" class="button">Bases</a>
+    <a routerLink="/catalog"  class="button" routerLinkActive="disabled" [routerLinkActiveOptions]="{exact: true}">All</a>
   </div>
 
   <ul class="products">
